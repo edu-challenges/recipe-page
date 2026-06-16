@@ -50,17 +50,17 @@ h6 {
     overflow-wrap: break-word;
 }
 
-p {
+/* p {
     text-wrap: pretty;
-}
-h1,
+} */
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
     text-wrap: balance;
-}
+} */
 
 #root,
 #__next {
@@ -74,16 +74,6 @@ h6 {
     --font-regular: 400;
     --font-semibold: 600;
     --font-bold: 700;
-
-    /* scale */
-    --base: 1rem;
-    --mult: 1.2;
-
-    --font-xl: var(--font-lg) * var(--mult);
-    --font-lg: var(--base) * var(--mult);
-    --font-base: var(--base);
-    --font-sm: var(--base) / var(--mult);
-    --font-xs: var(var(--font-sm)) / var(--mult);
 
     /* colors */
     --white: hsl(0, 0%, 100%);
@@ -99,7 +89,84 @@ h6 {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2rem;
+
     font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: var(--font-regular);
+    color: var(--stone-600);
+
+    .page-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    h1,
+    h2 {
+        font-family: var(--font-headings);
+        font-weight: var(--font-regular);
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1;
+        color: var(--stone-900);
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: var(--brown-800);
+    }
+
+    hgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    .prep-time {
+        display: flex;
+        flex-direction: column;
+        padding: 1.6rem;
+        gap: 1rem;
+        background-color: var(--rose-50);
+        border-radius: 1rem;
+
+        h2 {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            font-weight: var(--font-bold);
+            color: var(--rose-800);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            padding-inline: 1.5rem;
+
+            li {
+                padding-inline-start: 1rem;
+            }
+
+            li::marker {
+                color: var(--rose-800);
+                font-size: 0.8rem;
+                padding-right: 1rem;
+            }
+
+            span {
+                font-weight: var(--font-bold);
+            }
+        }
+    }
 }
 
 /* attribution */
