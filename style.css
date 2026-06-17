@@ -103,11 +103,19 @@ body {
     font-weight: var(--font-regular);
     color: var(--stone-600);
 
-    .page-container {
+    main {
         display: flex;
         flex-direction: column;
         gap: 2rem;
         padding: 2.4rem;
+
+        img {
+            /* Full-bleed image on mobile, ignoring main horizontal padding */
+            width: calc(100% + 4.8rem);
+            max-width: none;
+            margin-inline: -2.4rem;
+            margin-top: -2.4rem;
+        }
     }
 
     h1,
@@ -139,8 +147,8 @@ body {
         gap: 1rem;
     }
 
-    .page-container > :nth-child(3),
-    .page-container > :nth-child(4) {
+    main > :nth-child(3),
+    main > :nth-child(4) {
         border-bottom: 1px solid var(--stone-150);
         padding-bottom: 2rem;
     }
@@ -229,6 +237,28 @@ body {
         td {
             font-weight: var(--font-bold);
             color: var(--brown-800);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: var(--stone-100);
+        padding-block: 5rem;
+        padding-inline: 2rem;
+
+        main {
+            max-width: 738px;
+            background-color: var(--white);
+            border-radius: 1.5rem;
+        }
+
+        main > img {
+            width: 100%;
+            max-width: 100%;
+            margin-inline: 0;
+            margin-top: 0;
+            border-radius: 0.8rem;
         }
     }
 }
