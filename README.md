@@ -17,8 +17,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: _coming soon_
-- Live Site URL: _coming soon_
+- Solution URL: https://github.com/edu-challenges/recipe-page
+- Live Site URL: https://edu-challenges.github.io/recipe-page
 
 ## My process
 
